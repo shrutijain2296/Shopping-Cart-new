@@ -40,12 +40,14 @@ function CartList({ cart, setCart }) {
             <img src={item.images && item.images[0]} alt={item.title} />
             <p>{item.title}</p>
           </div>
-          <div>
+          <div className='qty-price'>
             <span>
-              $ {item.price} x {item.quantity} = ${item.price * item.quantity}
-            </span>
-            <button onClick={() => handleRemove(item.id)}>Remove</button>
-            <button onClick={() => handleAdd(item.id)}>Add more</button>
+              $ {item.price} x {item.quantity} = ${item.price * item.quantity}           
+            </span>   
+          </div>
+          <div className='add-remove'>
+            <button onClick={() => handleAdd(item.id)}>+</button>            
+            <button onClick={() => handleRemove(item.id)}>-</button>
           </div>
         </div>
       ))}
