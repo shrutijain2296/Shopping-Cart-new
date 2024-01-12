@@ -41,8 +41,22 @@ function Homepage() {
   );
 
   const addToCart = (product) => {
-    setCart([...cart, product ])
-  }; 
+    const existingItem = cart.find((item) => item.id === product.id);
+  
+    if (existingItem) {
+      // If the item already exists in the cart, increase its quantity
+      setCart((prevCart) =>
+        prevCart.map((item) =>
+          item.id === existingItem.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      // If the item is not in the cart, add it with quantity 1
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
+  };
 
   // Pagination
   const itemsPerPage = 12;
