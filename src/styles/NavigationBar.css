@@ -1,0 +1,42 @@
+.navigation-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #141414;
+    color: #fff;
+    height: 60px;
+  }
+  .homePage{
+    border: none;
+    background-color: #141414;
+    cursor: pointer;
+  }
+  .input-bar{
+    height: 30px;
+    background-color: rgb(248, 229, 229);
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  .cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .myCartBtn{
+    border: 1px solid #fff;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #141414;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .myCartBtn:hover{
+    background-color: lightblue;
+    color: black;
+    font-weight: 500;
+  }
